@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-FrontSide</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    body{
+        font-family: "Helvetica Neue",
+            Arial,
+              "Hiragino Kaku Gothic ProN",
+              "Hiragino Sans",
+              Meiryo,
+           sans-serif;
+    }
+    .red{
+        background-color: red;
+        margin: 5px;
+        border-radius: 5px;
+    }
+    .yellow{
+        background-color: yellow;
+        margin: 5px;
+        border-radius: 5px;
+    }
+    #Warning{
+        display: flex;
+        flex-wrap: wrap;
+    }
+</style>
+<body>
+    <div id="Warning">
+        <% if(Array.isArray(red)) {%>
+        <% red.forEach(item =>{%>
+            <h1 class="red"><%=item%></h1>
+        <%}) %>
+        <% } else {%>
+            <h1 class="red"><%=red%></h1>
+        <% } %>
+        <% if(Array.isArray(yellow)){ %>
+        <% yellow.forEach(item => { %>
+            <h1 class="yellow"><%=item%></h1>
+        <%});%>
+        <% } else {%>
+            <h1 class="yellow"><%=yellow%></h1>
+        <% } %>
+    </div>
+</body>
+</html>
